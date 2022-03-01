@@ -16,10 +16,10 @@ metadata:
 spec:
   tls:                                # (Optional section). Only needed if SSL termination will be done by nginx controller. SSL termination can also be done at load balancer level (i.e. for AWS using ACM certificates: https://kubernetes.github.io/ingress-nginx/deploy/#tls-termination-in-aws-load-balancer-elb)
     - hosts:
-      - spinnaker.mycompany.com       # Public facing spinnaker domain
+      - spinnaker.local       # Public facing spinnaker domain
       secretName: tls-secret          # There must be a secret with this name in the namespace where spinnaker is installed, of type "kubernetes.io/tls". Otherwise a self-signed certificate is used.
   rules:
-    - host: spinnaker.mycompany.com   # Public facing spinnaker domain
+    - host: spinnaker.local   # Public facing spinnaker domain
       http:
         paths:
           - backend:
@@ -29,7 +29,7 @@ spec:
                   number: 9000
             path: /
             pathType: Prefix
-    - host: spinnaker.mycompany.com   # Public facing spinnaker domain
+    - host: spinnaker.local   # Public facing spinnaker domain
       http:
         paths:
           - backend:
