@@ -14,7 +14,7 @@ metadata:
     traefik.ingress.kubernetes.io/redirect-entry-point: https
 spec:
   rules:
-  - host: spinnaker.mycompany.com           # Public facing spinnaker domain
+  - host: spinnaker.local           # Public facing spinnaker domain
     http:
       paths:
       - backend:
