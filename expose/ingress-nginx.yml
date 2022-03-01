@@ -28,6 +28,7 @@ spec:
                 port:
                   number: 9000
             path: /
+            pathType: Prefix
     - host: spinnaker.mycompany.com   # Public facing spinnaker domain
       http:
         paths:
@@ -37,3 +38,4 @@ spec:
                 port:
                   number: 8084
             path: /api/v1
+            pathType: Prefix
